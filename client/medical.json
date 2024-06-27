@@ -1,0 +1,35 @@
+{
+  "users": [
+    {
+      "firstname": "earl",
+      "middlename": "munyua",
+      "lastname": "nduhiu",
+      "dateofbirth": "2024-06-05",
+      "sex": "female",
+      "age": "10",
+      "race": "1",
+      "hispanic": "no",
+      "id": 1
+    }
+  ],
+  "address": [
+    {
+      "physicaladdress": "Sinai Court",
+      "country": "Kenya",
+      "physicalcounty": "nairobi",
+      "physicalstate": "nairobi",
+      "id": 1
+    }
+  ],
+  "medical": [
+    {
+      "facilityname": "Nairobi Hospital",
+      "facilitycity": "nairobi",
+      "facilitycounty": "nairobi",
+      "facilitystate": "Kenya",
+      "phonenumber": "0717029229",
+      "medicalrecord": "My name is Earl",
+      "id": 1
+    }
+  ]
+}
