@@ -34,7 +34,7 @@ function App() {
 
   function handleInfoSubmit(e) {
     e.preventDefault();
-    fetch("http://localhost:5000/users", {
+    fetch("/users", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -82,7 +82,7 @@ function App() {
 
   function handleAddressSubmit(e) {
     e.preventDefault();
-    fetch("http://localhost:5000/address", {
+    fetch("/address", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -124,7 +124,7 @@ function App() {
 
   function handleMedicalSubmit(e) {
     e.preventDefault();
-    fetch("http://localhost:5000/medical", {
+    fetch("/medical", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

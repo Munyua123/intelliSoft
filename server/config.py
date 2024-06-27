@@ -25,7 +25,5 @@ db.init_app(app)
 
 api = Api(app)
 
-bcrypt = Bcrypt(app)
-
 
 CORS(app)
