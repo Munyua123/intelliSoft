@@ -24,7 +24,7 @@ function Medical({
         onSubmit={handleMedicalSubmit}
       >
         <div className="row g-2">
-          <div className="col-sm-6">
+          <div className="col-sm-3">
             <label htmlFor="facilityname" className="form-label">
               Facility Name
             </label>
@@ -36,7 +36,7 @@ function Medical({
               onChange={handleMedicalChange}
             />
           </div>
-          <div className="col-sm-6">
+          <div className="col-sm-3">
             <label htmlFor="facilitycity" className="form-label">
               City
             </label>
@@ -51,7 +51,7 @@ function Medical({
           </div>
         </div>
 
-        <div className="col-md-6">
+        <div className="col-md-4">
           <label htmlFor="facilitycounty" className="form-label">
             County
           </label>
@@ -63,7 +63,7 @@ function Medical({
             onChange={handleMedicalChange}
           />
         </div>
-        <div className="col-md-4">
+        <div className="col-md-3">
           <label htmlFor="facilitystate" className="form-label">
             State
           </label>
@@ -75,7 +75,7 @@ function Medical({
             onChange={handleMedicalChange}
           />
         </div>
-        <div className="col-md-2">
+        <div className="col-md-3">
           <label htmlFor="phonenumber" className="form-label">
             Phone number
           </label>
@@ -87,18 +87,19 @@ function Medical({
             onChange={handleMedicalChange}
           />
         </div>
-        <div className="col-12">
+        <div className="col-7">
           <label htmlFor="medicalrecord" className="form-label">
             Medical Record
           </label>
-          <input
-            type="text"
+
+          <textarea
             className="form-control"
             id="medicalrecord"
-            placeholder="If you have a medical record insert here"
+            rows="3"
             value={medicalrecord}
             onChange={handleMedicalChange}
-          />
+            placeholder="If you have a medical record insert here"
+          ></textarea>
         </div>
         <div className="col-12">
           <button

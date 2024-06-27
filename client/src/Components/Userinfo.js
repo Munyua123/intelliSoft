@@ -75,13 +75,13 @@ function Userinfo({
           </div>
         </div>
         <div className="row g-4">
-          <div className="col-sm-2">
+          <div className="col-sm-3">
             <label htmlFor="sex" className="form-label">
               Sex
             </label>
             <div
               className="form-check form-check-inline"
-              style={{ marginLeft: "2rem" }}
+              style={{ marginLeft: "1rem" }}
             >
               <input
                 className="form-check-input"
@@ -111,7 +111,7 @@ function Userinfo({
               </label>
             </div>
           </div>
-          <div className="col-sm-3">
+          <div className="col-sm-2">
             <input
               type="number"
               className="form-control"
@@ -130,9 +130,10 @@ function Userinfo({
               onChange={handleInfoChange}
             >
               <option defaultValue="">Race</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
+              <option value="Black">Black</option>
+              <option value="White">White</option>
+              <option value="Asian/Pacific Islander">Asian/Pacific Islander</option>
+              <option value="Unknown">Unknown</option>
             </select>
           </div>
           <div className="col-sm-4">
