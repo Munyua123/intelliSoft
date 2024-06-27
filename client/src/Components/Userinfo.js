@@ -1,40 +1,42 @@
 function Userinfo() {
-    return (
-      <div>
-        <form>
-          <div className="mb-3">
-            <div className="row">
-              <div className="col">
-                <input
-                  type="text"
-                  className="form-control"
-                  placeholder="First name"
-                  aria-label="First name"
-                />
-              </div>
-              <div className="col">
-                <input
-                  type="text"
-                  className="form-control"
-                  placeholder="Middle name"
-                  aria-label="Middle name"
-                />
-              </div>
-              <div className="col">
-                <input
-                  type="text"
-                  className="form-control"
-                  placeholder="Last name"
-                  aria-label="Last name"
-                />
-              </div>
+  return (
+    <div>
+      <h2>USER INFORMATION</h2>
+      <form style={{ border:"2px solid", padding:"1rem"}} className="mx-auto d-block">
+        <div className="mb-3">
+          <div className="row">
+            <div className="col">
+              <input
+                type="text"
+                className="form-control"
+                placeholder="First name"
+                aria-label="First name"
+              />
             </div>
-            <label htmlFor="dateofbirth" className="form-label">
-              Date of Birth
-            </label>
-            <input type="date" className="form-control" id="dateofbirth" />
+            <div className="col">
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Middle name"
+                aria-label="Middle name"
+              />
+            </div>
+            <div className="col">
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Last name"
+                aria-label="Last name"
+              />
+            </div>
           </div>
-          <div className="mb-3">
+          <label htmlFor="dateofbirth" className="form-label">
+            Date of Birth
+          </label>
+          <input type="date" className="form-control" id="dateofbirth" />
+        </div>
+        <div className="row g-3">
+          <div className="col-sm-5">
             <label htmlFor="sex" className="form-label">
               Sex
             </label>
@@ -66,13 +68,15 @@ function Userinfo() {
               </label>
             </div>
           </div>
-          <div className="mb-3">
-            <label htmlFor="age" className="form-label">
-              Age
-            </label>
-            <input type="age" className="form-control" id="age" />
+          <div className="col-sm">
+            <input
+              type="date"
+              className="form-control"
+              placeholder="Age"
+              aria-label="age"
+            />
           </div>
-          <div className="mb-3">
+          <div className="col-sm">
             <select className="form-select" aria-label="Default select example">
               <option defaultValue="">Race</option>
               <option value="1">One</option>
@@ -80,13 +84,14 @@ function Userinfo() {
               <option value="3">Three</option>
             </select>
           </div>
-          <button type="submit" className="btn btn-primary">
-            Next
-          </button>
-        </form>
-      </div>
-    );
-  }
-  
-  export default Userinfo;
-  
+        </div>
+
+        <button type="submit" className="btn btn-primary">
+          Next
+        </button>
+      </form>
+    </div>
+  );
+}
+
+export default Userinfo;
