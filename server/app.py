@@ -40,6 +40,9 @@ class Users(Resource):
         db.session.add(new_user)
         db.session.commit()
 
+        session.clear()
+        session['user_id'] = new_user.id
+
         response_dict = new_user.to_dict()
 
         response = make_response(
@@ -65,13 +68,18 @@ class Addresses(Resource):
         country = data.get('country')
         physicalcounty = data.get('physicalcounty')
         physicalstate = data.get('physicalstate')
+        user_id = session.get('user_id')
+
+        if not user_id:
+            return make_response(jsonify({"error": "user_id is required"}), 400)
         
 
         new_address = Address(
             physicaladdress = physicaladdress,
             country = country,
             physicalcounty = physicalcounty,
-            physicalstate = physicalstate
+            physicalstate = physicalstate,
+            user_id = user_id
         )
 
         db.session.add(new_address)
@@ -106,6 +114,7 @@ class Medicals(Resource):
         facilitystate = data.get('facilitystate')
         phonenumber = data.get('phonenumber')
         medicalrecord = data.get('medicalrecord')
+        user_id = session.get('user_id')
         
 
         new_medical = Medical(
@@ -114,11 +123,14 @@ class Medicals(Resource):
             facilitycounty = facilitycounty,
             facilitystate = facilitystate,
             phonenumber = phonenumber,
-            medicalrecord = medicalrecord
+            medicalrecord = medicalrecord,
+            user_id = user_id
         )
 
         db.session.add(new_medical)
         db.session.commit()
+
+        session.pop('user_id', None)
 
         response_dict = new_medical.to_dict()
 
